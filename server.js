@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Hello world" });
+  res.status(200).send({ message: "Hello world" });
 });
 
 require("./app/routes/produtos.routes.js")(app);
